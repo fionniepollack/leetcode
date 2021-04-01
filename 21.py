@@ -18,28 +18,28 @@ class Solution:
             return l1_node
         
         if l1_node == None:
-            print("merged_node starts as l2_node")
+            #print("merged_node starts as l2_node")
             merged_node = l2_node
             l2_node = l2_node.next
 
         elif l2_node == None:
-            print("merged_node starts as l1_node")
+            #print("merged_node starts as l1_node")
             merged_node = l1_node
             l1_node = l1_node.next
 
         elif l1_node.val < l2_node.val:
-            print("merged_node starts as l1_node")
+            #print("merged_node starts as l1_node")
             merged_node = l1_node
             l1_node = l1_node.next
 
         else: 
-            print("merged_node starts as l2_node")
+            #print("merged_node starts as l2_node")
             merged_node = l2_node
             l2_node = l2_node.next
         
         head = merged_node
         
-        print(f"Setting head to first node: {head.val}")
+        #print(f"Setting head to first node: {head.val}")
 
         while l1_node != None or l2_node != None:      
             if l1_node == None:
